@@ -1,3 +1,8 @@
+def video(a: int):
+    b = (a-1) * 30
+    # 观察发现b站搜索关键字’日本核污染水排海‘网站翻页的url具有page+1&&o+30的规律
+    return f'https://search.bilibili.com/all?keyword=%E6%97%A5%E6%9C%AC%E6%A0%B8%E6%B1%A1%E6%9F%93%E6%B0%B4%E6%8E%92%E6%B5%B7&from_source=webtop_search&spm_id_from=333.1007&search_source=5&page={a}&o={b}'
+#此函数获取综合排名前300的视频链接
 def get_video_url(k: int):
     driver = webdriver.Edge()  #利用edge浏览器驱动
     for i in range(k):
